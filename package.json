@@ -1,0 +1,37 @@
+{
+  "name": "l5_t1",
+  "version": "1.0.0",
+  "description": "extended classes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "check": "jest",
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aleksandr-Suchugov/L5_t1.git"
+  },
+  "keywords": [
+    "game"
+  ],
+  "author": "Aleks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aleksandr-Suchugov/L5_t1/issues"
+  },
+  "homepage": "https://github.com/Aleksandr-Suchugov/L5_t1#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "babel-jest": "^27.5.1",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "jest": "^27.5.1"
+  },
+  "dependencies": {
+    "core-js": "^3.21.1"
+  }
+}
