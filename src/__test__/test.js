@@ -108,3 +108,41 @@ test('to check that created Undead object has all properties', () => {
   const egor = new Undead('Egor');
   expect(egor).toEqual(sample);
 });
+
+test('to check method levelUp() increases unit level.', () => {
+  const sampleLvl2 = {
+    name: 'Egor',
+    type: 'Swordsman',
+    health: 200,
+    level: 2,
+    attack: 48,
+    defence: 12,
+  };
+  const egor = new Character('Egor', 'Swordsman', 100, 1, 40, 10);
+  egor.levelUp();
+  expect(egor).toEqual(sampleLvl2);
+});
+
+test('to check method levelUp() throws error for dead unit.', () => {
+  const sample = new Character('Egor', 'Swordsman', 0, 1, 40, 10);
+  expect(() => { sample.levelUp(); }).toThrow('The hero is dead.');
+});
+
+test('to check method damage() affects the unit.', () => {
+  const sampleLvl2 = {
+    name: 'Egor',
+    type: 'Swordsman',
+    health: 91,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  };
+  const egor = new Character('Egor', 'Swordsman', 100, 1, 40, 10);
+  egor.damage(10);
+  expect(egor).toEqual(sampleLvl2);
+});
+
+test('to check method damage() throws error for dead unit.', () => {
+  const sample = new Character('Egor', 'Swordsman', 0, 1, 40, 10);
+  expect(() => { sample.damage(10); }).toThrow('The hero is dead.');
+});
